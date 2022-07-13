@@ -1,0 +1,13 @@
+.underconstruction-content {
+  margin-top: 350px;
+  margin-bottom: 350px;
+}
+.underconstruction-content__title {
+  color: #007bff;
+}
+.hr {
+  display: block;
+  width: 1500px;
+  text-align: center;
+  margin: 20px auto;
+}

@@ -1,0 +1,30 @@
+.navbar-brand{
+    background-color: #212529;
+}
+#logo{
+    width: 100px;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+nav a{
+    text-decoration: none;
+    color: rgba(255,255,255,.55);
+    display: block;
+    text-align: center;
+}
+nav a:hover{
+    color: rgba(255,255,255);
+}
+.dropdown-menu{
+    background-color: black !important;
+}
+.dropdown-menu.show{
+    border-radius: 10px;
+}
+.dropdown-item:hover{
+    color: black !important;
+    background-color: rgba(255,255,255,.55) !important;
+}
+.disabled{
+    color:  rgba(255,255,255,.25) !important;
+}

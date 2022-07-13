@@ -5,13 +5,20 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./NavigationBar.css";
+import { NavLink } from "react-router-dom";
 
 function NavigationBar() {
+
+
+
+
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar bg="dark" expand="lg" variant="dark" sticky="top">
       <Container fluid>
-        <Navbar.Brand href="">
-          <img id="logo" alt="logo" src="/logo.png"></img>
+        <Navbar.Brand>
+          <NavLink to="/">
+            <img id="logo" alt="logo" src="/logo.png"></img>
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -20,27 +27,29 @@ function NavigationBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link>
+              <NavLink to="/">Home</NavLink>
+            </Nav.Link>
             {/* nav drop down 1 */}
             <NavDropdown title="Employee" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action2">View All Employee</NavDropdown.Item>
+              <NavLink to="/employess">View All Employee</NavLink>
+              {/* </NavDropdown.Item> */}
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action4">
-                Don't Know !
-              </NavDropdown.Item>
+
+              <NavLink data-rr-ui-dropdown-item="" to="/underconstruction">Service</NavLink>
             </NavDropdown>
 
             {/* Nav dropdown 2 */}
             <NavDropdown title="Customer" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">
-                View All Customer
-              </NavDropdown.Item>
+              <NavLink to="/customers">View All Customer</NavLink>
+
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">On The Way!</NavDropdown.Item>
+
+              <NavLink to="/underconstruction">On The Way!</NavLink>
             </NavDropdown>
 
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link disabled>
+              <NavLink to="/underconstruction" className="disabled">How We Work</NavLink>
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
